@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+   <html lang="zh-CN">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>生日祝福</title>
+       <style>
+           * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       background: #ffe6f2;
+       font-family: "Microsoft YaHei", sans-serif;
+       height: 100vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .birthday-text {
+       font-size: 2rem;
+       color: #ff1493;
+       animation: float 2s infinite;
+   }
+
+   @keyframes float {
+       0%, 100% { transform: translateY(0); }
+       50% { transform: translateY(-10px); }
+   }
+
+   button {
+       padding: 10px 20px;
+       background: #ff69b4;
+       border: none;
+       border-radius: 20px;
+       color: white;
+       margin-top: 20px;
+       cursor: pointer;
+   }
+       </style>
+   </head>
+   <body>
+       <div class="container">
+           <h1 class="birthday-text">🎉 生日快乐！</h1>
+           <button onclick="playMusic()">点击播放音乐</button>
+       </div>
+       <script>
+           function playMusic() {
+       const audio = new Audio('birthday.mp3');
+       audio.play().catch(() => {
+           alert('请点击确认允许播放音乐~');
+       });
+   }
+       </script>
+   </body>
+   </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>生日视频</title>
+    <style>
+        video {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video id="videoPlayer" controls autoplay>
+        <source src="birthday_video.mp4" type="video/mp4">
+    </video>
+    <script>
+        // 自动全屏播放（需要用户交互后生效）
+        document.getElementById('videoPlayer').requestFullscreen();
+    </script>
+</body>
+</html>
